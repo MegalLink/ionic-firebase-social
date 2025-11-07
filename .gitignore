@@ -103,6 +103,10 @@ secrets.json
 *.p12
 *.pem
 
+# Firebase configuration with credentials (DO NOT COMMIT)
+/src/environments/firebase.config.ts
+**/firebase.config.ts
+
 # IDEs and editors (user settings)
 .idea/
 .vscode/

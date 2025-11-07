@@ -13,42 +13,67 @@
       <p class="welcome-subtitle">Únete a nosotros hoy</p>
     </div>
 
-    <form class="auth-form">
+    <form class="auth-form" (ngSubmit)="onSignup()">
       <div class="input-group">
         <ion-item lines="none" class="modern-input">
           <ion-icon name="person-outline" slot="start" class="input-icon"></ion-icon>
-          <ion-input type="text" placeholder="Nombre completo"></ion-input>
+          <ion-input 
+            type="text" 
+            placeholder="Nombre completo"
+            [(ngModel)]="displayName"
+            name="displayName"
+            autocomplete="name"
+            [disabled]="isLoading"></ion-input>
         </ion-item>
       </div>
 
       <div class="input-group">
         <ion-item lines="none" class="modern-input">
           <ion-icon name="mail-outline" slot="start" class="input-icon"></ion-icon>
-          <ion-input type="email" placeholder="Email"></ion-input>
+          <ion-input 
+            type="email" 
+            placeholder="Email"
+            [(ngModel)]="email"
+            name="email"
+            autocomplete="email"
+            [disabled]="isLoading"></ion-input>
         </ion-item>
       </div>
 
       <div class="input-group">
         <ion-item lines="none" class="modern-input">
           <ion-icon name="lock-closed-outline" slot="start" class="input-icon"></ion-icon>
-          <ion-input type="password" placeholder="Contraseña"></ion-input>
+          <ion-input 
+            type="password" 
+            placeholder="Contraseña"
+            [(ngModel)]="password"
+            name="password"
+            autocomplete="new-password"
+            [disabled]="isLoading"></ion-input>
         </ion-item>
       </div>
 
       <div class="input-group">
         <ion-item lines="none" class="modern-input">
           <ion-icon name="lock-closed-outline" slot="start" class="input-icon"></ion-icon>
-          <ion-input type="password" placeholder="Confirmar Contraseña"></ion-input>
+          <ion-input 
+            type="password" 
+            placeholder="Confirmar Contraseña"
+            [(ngModel)]="confirmPassword"
+            name="confirmPassword"
+            autocomplete="new-password"
+            [disabled]="isLoading"></ion-input>
         </ion-item>
       </div>
 
-      <ion-button expand="block" class="auth-button" shape="round">
-        <span>Crear Cuenta</span>
+      <ion-button 
+        expand="block" 
+        class="auth-button" 
+        shape="round"
+        type="submit"
+        [disabled]="isLoading">
+        <span>{{ isLoading ? 'Creando...' : 'Crear Cuenta' }}</span>
       </ion-button>
-
-      <div class="divider">
-        <span>o regístrate con</span>
-      </div>
 
       <div class="login-link">
         <p>¿Ya tienes una cuenta? 
