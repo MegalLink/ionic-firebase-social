@@ -1,0 +1,46 @@
+<ion-content [fullscreen]="true" class="auth-content">
+  <div class="auth-background">
+    <div class="gradient-circle circle-1"></div>
+    <div class="gradient-circle circle-2"></div>
+  </div>
+
+  <div class="auth-container">
+    <div class="logo-section">
+      <div class="logo-wrapper">
+        <ion-icon name="person-circle-outline" class="logo-icon"></ion-icon>
+      </div>
+      <h1 class="welcome-title">Bienvenido</h1>
+      <p class="welcome-subtitle">Inicia sesión para continuar</p>
+    </div>
+
+    <form class="auth-form">
+      <div class="input-group">
+        <ion-item lines="none" class="modern-input">
+          <ion-icon name="mail-outline" slot="start" class="input-icon"></ion-icon>
+          <ion-input type="email" placeholder="Email"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="input-group">
+        <ion-item lines="none" class="modern-input">
+          <ion-icon name="lock-closed-outline" slot="start" class="input-icon"></ion-icon>
+          <ion-input type="password" placeholder="Contraseña"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="forgot-password">
+        <a>¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <ion-button expand="block" class="auth-button" shape="round">
+        <span>Iniciar Sesión</span>
+      </ion-button>
+
+      <div class="signup-link">
+        <p>¿No tienes una cuenta? 
+          <a [routerLink]="['/signup']" class="link-highlight">Regístrate aquí</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</ion-content>
