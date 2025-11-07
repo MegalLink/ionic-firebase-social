@@ -1,0 +1,7 @@
+{
+  "name": "ionic-firebase-social",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
