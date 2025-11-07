@@ -68,3 +68,41 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Android / Capacitor build and local files
+/android/.gradle/
+/android/.idea/
+/android/local.properties
+/android/build/
+/android/app/build/
+/android/capacitor-cordova-android-plugins/
+/android/debug.keystore
+
+# Capacitor generated files (copied from www/)
+/android/app/src/main/assets/public/
+/android/app/src/main/assets/capacitor.config.json
+/android/app/src/main/assets/capacitor.plugins.json
+/android/app/src/main/res/xml/config.xml
+
+# Keystore and signing files
+*.jks
+*.keystore
+*.keystore.properties
+
+# Google / Firebase config (keep out of repo)
+/google-services.json
+**/google-services.json
+/ios/GoogleService-Info.plist
+**/GoogleService-Info.plist
+
+# Environment and secrets
+.env
+.env.*
+.env.local
+secrets.json
+*.p12
+*.pem
+
+# IDEs and editors (user settings)
+.idea/
+.vscode/
